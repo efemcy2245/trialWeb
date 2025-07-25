@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatti per giocare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #fffaf6;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-800">
+    <!-- Hero -->
+    <section class="relative text-center py-10 bg-gradient-to-b from-orange-100 to-red-100">
+      <h1 class="text-4xl font-bold">Fatti per giocare</h1>
+      <p class="mt-2 text-lg">I migliori giochi online</p>
+      <div class="mt-4 flex justify-center gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" alt="App Store" class="h-10" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10" />
+      </div>
+
+      <!-- Background Leaves (optional) -->
+      <div class="absolute top-0 left-0 right-0 opacity-30">
+        <img src="your-background-image.png" alt="Leaves" class="w-full h-40 object-cover" />
+      </div>
+    </section>
+
+    <!-- Game Cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+      <!-- Card 1 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition bg-white">
+        <img src="your-image-cat.png" alt="Kipon" />
+        <div class="p-4 bg-gradient-to-t from-red-400 via-orange-300 to-yellow-100 text-white">
+          <h2 class="text-xl font-bold">Kipon</h2>
+          <p>Casual · Carino</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition bg-white">
+        <img src="your-image-robot.png" alt="Robotrix" />
+        <div class="p-4 bg-gradient-to-t from-purple-700 to-pink-400 text-white">
+          <h2 class="text-xl font-bold">Robotrix</h2>
+          <p>Sci-Fi · Geniale</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition bg-white">
+        <img src="your-image-treasure.png" alt="Treasure Box" />
+        <div class="p-4 bg-gradient-to-t from-yellow-600 to-orange-300 text-white">
+          <h2 class="text-xl font-bold">Treasure Box</h2>
+          <p>Avventura · Serio</p>
+        </div>
+      </div>
+
+      <!-- More Games -->
+      <div class="rounded-xl flex flex-col justify-center items-center p-10 bg-gradient-to-b from-yellow-300 to-orange-500 text-center text-white hover:scale-105 transition">
+        <h2 class="text-2xl font-bold">Altri giochi</h2>
+        <p class="text-xl">↓</p>
+      </div>
+    </section>
+
+    <!-- Game Descriptions -->
+    <section class="text-center py-16 bg-white">
+      <h2 class="text-3xl font-bold">L'intrattenimento a portata di mano</h2>
+      <p class="mt-2 max-w-xl mx-auto">Questo è un paragrafo. Puoi modificare o aggiungere i contenuti che preferisci.</p>
+      <button class="mt-6 bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600">Scopri di più</button>
+
+      <div class="mt-12 flex flex-wrap justify-center gap-10">
+        <!-- Game Description 1 -->
+        <div class="w-72 bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="font-bold">Kipon</h3>
+          <p class="text-sm mt-2">Gioco casual e carino, perfetto per tutti.</p>
+          <div class="flex gap-2 mt-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" class="h-8" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-8" />
+          </div>
+        </div>
+
+        <!-- Game Description 2 -->
+        <div class="w-72 bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="font-bold">Treasure Box</h3>
+          <p class="text-sm mt-2">Un'avventura tra perle e misteri d'oro!</p>
+          <div class="flex gap-2 mt-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" class="h-8" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-8" />
+          </div>
+        </div>
+
+        <!-- Game Description 3 -->
+        <div class="w-72 bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="font-bold">Robotrix</h3>
+          <p class="text-sm mt-2">Unisciti al laboratorio segreto dei robot.</p>
+          <div class="flex gap-2 mt-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" class="h-8" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-8" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-4 text-gray-500 text-sm bg-gray-100">
+      © 2025 Fatti per giocare. Tutti i diritti riservati.
+    </footer>
+  </body>
+</html>
