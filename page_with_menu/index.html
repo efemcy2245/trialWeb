@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Folder Menu Page</title>
+  <script>
+    function showContent(folder) {
+      document.getElementById('content').innerText = "You selected: " + folder;
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    .menu-item {
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .menu-item:hover {
+      background-color: #e0e0e0;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="menu-item" onclick="showContent('Documents')">📁 Documents</div>
+      <div class="menu-item" onclick="showContent('Images')">📁 Images</div>
+      <div class="menu-item" onclick="showContent('Music')">📁 Music</div>
+      <div class="menu-item" onclick="showContent('Videos')">📁 Videos</div>
+    </div>
+    <div class="content" id="content">
+      Select a folder from the menu.
+    </div>
+  </div>
+</body>
+</html>
