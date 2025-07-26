@@ -1,0 +1,6 @@
+<!-- 
+tailwindcss is used to load Tailwind CSS via CDN (Content Delivery Network) directly into an HTML file.
+used : Quick prototyping - Demos or playgrounds - Simple static HTML files (without complex build steps)
+not used: Production projects (because it's slower and less customizable)
+          If you want: Purge unused CSS for performance - Customize Tailwind config (e.g., themes, plugins) - Add custom utilities
+-->
