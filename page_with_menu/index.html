@@ -3,12 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Folder Menu Page</title>
-  <script>
-    function showContent(folder) {
-      document.getElementById('content').innerText = "You selected: " + folder;
-    }
-  </script>
+  <title>Folder Navigation Page</title>
   <style>
     body {
       margin: 0;
@@ -17,20 +12,28 @@
     .container {
       display: flex;
       height: 100vh;
+      border: 3px solid #ffffff; /* You can change the color */
+
     }
     .sidebar {
-      width: 250px;
+      width: 300px;
       background-color: #f4f4f4;
       padding: 20px;
+      overflow-y: auto;
       box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     }
     .menu-item {
       cursor: pointer;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin: 4px 0;
     }
     .menu-item:hover {
-      background-color: #e0e0e0;
+      background-color: #ddd;
+    }
+    .subfolder {
+      margin-left: 20px;
+      display: none;
     }
     .content {
       flex: 1;
@@ -39,16 +42,62 @@
   </style>
 </head>
 <body>
-  <div class="container">
+    <!-- Hero -->
+    <section class="relative text-center py-10 bg-gradient-to-b from-orange-100 to-red-100">
+      <h1 class="text-4xl font-bold">Fatti per giocare</h1>
+      <p class="mt-2 text-lg">I migliori giochi online</p>
+      <div class="mt-4 flex justify-center gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" alt="App Store" class="h-10" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10" />
+      </div>
+
+      <!-- Background Leaves (optional) -->
+      <div class="absolute top-0 left-0 right-0 opacity-30">
+        <img src="your-background-image.png" alt="Leaves" class="w-full h-40 object-cover" />
+      </div>
+    </section>
+  
+  
+  
+    <div class="container">
     <div class="sidebar">
-      <div class="menu-item" onclick="showContent('Documents')">📁 Documents</div>
-      <div class="menu-item" onclick="showContent('Images')">📁 Images</div>
-      <div class="menu-item" onclick="showContent('Music')">📁 Music</div>
-      <div class="menu-item" onclick="showContent('Videos')">📁 Videos</div>
+      <div class="menu-item" onclick="toggle('documents-sub')">📁 Documents</div>
+      <div id="documents-sub" class="subfolder">
+        <div class="menu-item" onclick="showContent('Resume.docx content')">📄 Resume.docx</div>
+        <div class="menu-item" onclick="showContent('ProjectReport.pdf content')">📄 ProjectReport.pdf</div>
+      </div>
+
+      <div class="menu-item" onclick="toggle('images-sub')">📁 Images</div>
+      <div id="images-sub" class="subfolder">
+        <div class="menu-item" onclick="showContent('Photo1.jpg content')">🖼️ Photo1.jpg</div>
+        <div class="menu-item" onclick="showContent('Logo.png content')">🖼️ Logo.png</div>
+      </div>
+
+      <div class="menu-item" onclick="toggle('music-sub')">📁 Music</div>
+      <div id="music-sub" class="subfolder">
+        <div class="menu-item" onclick="showContent('Track1.mp3 content')">🎵 Track1.mp3</div>
+        <div class="menu-item" onclick="showContent('Track2.mp3 content')">🎵 Track2.mp3</div>
+      </div>
     </div>
+
     <div class="content" id="content">
-      Select a folder from the menu.
+      <h2>Welcome</h2>
+      <p>Select a file to view its content.</p>
     </div>
   </div>
+
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function showContent(text) {
+      document.getElementById('content').innerHTML = `
+        <h2>File Content</h2>
+        <p>${text}</p>
+      `;
+    }
+  </script>
 </body>
 </html>
